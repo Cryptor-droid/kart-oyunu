@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://btvksj3rmptl0"]
+
+[ext_resource type="PackedScene" uid="uid://dfux8nha6l8da" path="res://objects/defaultCard.tscn" id="1_lrxn5"]
+[ext_resource type="Texture2D" uid="uid://bbybc7swg5kmr" path="res://sprites/card_art/CardBeer.png" id="2_cfbg1"]
+
+[node name="Card" instance=ExtResource("1_lrxn5")]
+card_id = 3
+card_amount = 5
+default_z = 0
+visual_only = false
+card_name = "Beer"
+card_description = "Heal 1 health"
+card_graphics = ExtResource("2_cfbg1")
+
+[node name="TextureRect" parent="CardPanel" index="0"]
+texture = ExtResource("2_cfbg1")
+
+[node name="nameLabel" parent="CardPanel" index="1"]
+text = "Beer"
+
+[node name="propertiesLabel" parent="CardPanel" index="2"]
+text = "Heal 1 health"

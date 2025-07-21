@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://0wlh08j04oxx"]
+
+[ext_resource type="PackedScene" uid="uid://dfux8nha6l8da" path="res://objects/defaultCard.tscn" id="1_yah2d"]
+[ext_resource type="Texture2D" uid="uid://ck1iwoqxuu5yk" path="res://sprites/card_art/CardBackSide.png" id="2_cwdhw"]
+
+[node name="Card" instance=ExtResource("1_yah2d")]
+default_z = 0
+visual_only = false
+card_name = ""
+card_description = ""
+card_graphics = ExtResource("2_cwdhw")
+
+[node name="TextureRect" parent="CardPanel" index="0"]
+texture = ExtResource("2_cwdhw")
+
+[node name="nameLabel" parent="CardPanel" index="1"]
+text = ""
+
+[node name="propertiesLabel" parent="CardPanel" index="2"]
+text = ""

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dorlujybblk"]
+
+[ext_resource type="PackedScene" uid="uid://dfux8nha6l8da" path="res://objects/defaultCard.tscn" id="1_keykb"]
+[ext_resource type="Texture2D" uid="uid://bs207spap3i3b" path="res://sprites/card_art/CardSlash.png" id="2_siv87"]
+
+[node name="Card" instance=ExtResource("1_keykb")]
+card_id = 1
+card_amount = 15
+default_z = 0
+visual_only = false
+card_name = "Bang!"
+card_description = "  Deals 1 damage to the player in range."
+card_graphics = ExtResource("2_siv87")
+
+[node name="TextureRect" parent="CardPanel" index="0"]
+texture = ExtResource("2_siv87")
+
+[node name="nameLabel" parent="CardPanel" index="1"]
+text = "Bang!"
+
+[node name="propertiesLabel" parent="CardPanel" index="2"]
+text = "  Deals 1 damage to the player in range."

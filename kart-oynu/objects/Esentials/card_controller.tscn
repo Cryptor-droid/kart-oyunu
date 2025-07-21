@@ -1,0 +1,10 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5hfxg6wfaej5"]
+
+[ext_resource type="Script" uid="uid://mwljo85or5i3" path="res://Scripts/card_controller.gd" id="1_er331"]
+[ext_resource type="PackedScene" uid="uid://dorlujybblk" path="res://objects/Cards/bang.tscn" id="2_thfcv"]
+[ext_resource type="PackedScene" uid="uid://btvksj3rmptl0" path="res://objects/Cards/beer.tscn" id="3_r8en6"]
+[ext_resource type="PackedScene" uid="uid://d0ywgtc4gc7qa" path="res://objects/Cards/dodge.tscn" id="4_wppi5"]
+
+[node name="CardController" type="Node"]
+script = ExtResource("1_er331")
+card_scenes = Array[PackedScene]([ExtResource("2_thfcv"), ExtResource("3_r8en6"), ExtResource("4_wppi5")])

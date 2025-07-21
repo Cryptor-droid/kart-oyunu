@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7wkf8upvgtbl"]
+
+[ext_resource type="Script" uid="uid://cjeurxn0gb4n0" path="res://Scripts/hand_deck.gd" id="1_2ksbx"]
+[ext_resource type="PackedScene" uid="uid://bkyu16ilojuwf" path="res://objects/Esentials/deck_controller.tscn" id="1_rv25a"]
+[ext_resource type="PackedScene" uid="uid://b5hfxg6wfaej5" path="res://objects/Esentials/card_controller.tscn" id="1_uylsc"]
+
+[node name="CardTable" type="Node2D"]
+
+[node name="DeckController" parent="." instance=ExtResource("1_rv25a")]
+GameDeck = Array[int]([3, 1, 1, 1, 3, 2, 3, 2, 2, 1, 2, 2, 1, 2, 2, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2])
+
+[node name="CardController" parent="." instance=ExtResource("1_uylsc")]
+
+[node name="HandDeck" type="Node2D" parent="."]
+script = ExtResource("1_2ksbx")
+
+[node name="Canvas" type="CanvasLayer" parent="HandDeck"]
+follow_viewport_enabled = true
+
+[node name="HandDeckPanel" type="Panel" parent="HandDeck/Canvas"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -212.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+
+[connection signal="resized" from="HandDeck/Canvas/HandDeckPanel" to="HandDeck" method="_on_hand_deck_panel_resized"]

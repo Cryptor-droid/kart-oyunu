@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0ywgtc4gc7qa"]
+
+[ext_resource type="PackedScene" uid="uid://dfux8nha6l8da" path="res://objects/defaultCard.tscn" id="1_ekkea"]
+[ext_resource type="Texture2D" uid="uid://d11wa3fraih02" path="res://sprites/card_art/CardMissed.png" id="2_5wecg"]
+
+[node name="Card" instance=ExtResource("1_ekkea")]
+card_id = 2
+card_amount = 10
+default_z = 0
+visual_only = false
+card_name = "Dodge!"
+card_description = "Dodges the bang card"
+card_graphics = ExtResource("2_5wecg")
+
+[node name="TextureRect" parent="CardPanel" index="0"]
+texture = ExtResource("2_5wecg")
+
+[node name="nameLabel" parent="CardPanel" index="1"]
+text = "Dodge!"
+
+[node name="propertiesLabel" parent="CardPanel" index="2"]
+text = "Dodges the bang card"
