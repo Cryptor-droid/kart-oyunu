@@ -6,8 +6,6 @@
 [node name="Card" instance=ExtResource("1_ekkea")]
 card_id = 2
 card_amount = 10
-default_z = 0
-visual_only = false
 card_name = "Dodge!"
 card_description = "Dodges the bang card"
 card_graphics = ExtResource("2_5wecg")

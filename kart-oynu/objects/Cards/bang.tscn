@@ -6,8 +6,6 @@
 [node name="Card" instance=ExtResource("1_keykb")]
 card_id = 1
 card_amount = 15
-default_z = 0
-visual_only = false
 card_name = "Bang!"
 card_description = "  Deals 1 damage to the player in range."
 card_graphics = ExtResource("2_siv87")

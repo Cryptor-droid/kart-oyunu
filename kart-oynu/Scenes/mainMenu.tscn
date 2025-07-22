@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxr6w3sowe2vy"]
+
+[ext_resource type="Script" uid="uid://da8p2v0efbvr5" path="res://Scripts/Menus/main_menu.gd" id="1_60k44"]
+
+[node name="Lobby" type="Node2D"]
+script = ExtResource("1_60k44")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleText" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -217.0
+offset_right = 250.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IPText" type="TextEdit" parent="CanvasLayer/Panel"]
+offset_left = 12.0
+offset_top = 132.0
+offset_right = 488.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 72
+text = "127.0.0.1"
+emoji_menu_enabled = false
+
+[node name="NameText" type="TextEdit" parent="CanvasLayer/Panel"]
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 488.0
+offset_bottom = 119.0
+theme_override_font_sizes/font_size = 72
+text = "Plavyer"
+emoji_menu_enabled = false
+
+[node name="PortText" type="TextEdit" parent="CanvasLayer/Panel"]
+offset_left = 12.0
+offset_top = 251.0
+offset_right = 488.0
+offset_bottom = 355.0
+theme_override_font_sizes/font_size = 72
+text = "3169"
+emoji_menu_enabled = false
+
+[node name="HostButton" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 364.0
+offset_right = 166.0
+offset_bottom = 426.0
+theme_override_font_sizes/font_size = 36
+text = "Host"
+
+[node name="JoinButton" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 364.0
+offset_right = 487.0
+offset_bottom = 426.0
+theme_override_font_sizes/font_size = 36
+text = "Join"

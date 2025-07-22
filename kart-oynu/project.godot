@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="kart oynu"
-run/main_scene="uid://c7wkf8upvgtbl"
+run/main_scene="uid://cxr6w3sowe2vy"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+NetworkManager="*res://Globals/networkManager.gd"
 
 [display]
 

@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbe1fcwcputj1"]
+
+[ext_resource type="Script" uid="uid://dhhsb5r0hifoe" path="res://Scripts/Menus/lobby.gd" id="1_nvaej"]
+[ext_resource type="PackedScene" uid="uid://igh13wnobtho" path="res://objects/Esentials/chat.tscn" id="2_y0s6v"]
+
+[node name="lobby" type="Node2D" node_paths=PackedStringArray("playerDisplays")]
+script = ExtResource("1_nvaej")
+playerDisplays = [NodePath("CanvasLayer/Players/Player1Text"), NodePath("CanvasLayer/Players/Player2Text"), NodePath("CanvasLayer/Players/Player3Text"), NodePath("CanvasLayer/Players/Player4Text"), NodePath("CanvasLayer/Players/Player5Text"), NodePath("CanvasLayer/Players/Player6Text"), NodePath("CanvasLayer/Players/Player7Text"), NodePath("CanvasLayer/Players/Player8Text")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Players" type="Panel" parent="CanvasLayer"]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 256.0
+grow_vertical = 2
+
+[node name="Player1Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 13.0
+offset_right = 241.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player2Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 92.0
+offset_right = 241.0
+offset_bottom = 160.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player3Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 169.0
+offset_right = 241.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player4Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 248.0
+offset_right = 241.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player5Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 327.0
+offset_right = 241.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player6Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 406.0
+offset_right = 241.0
+offset_bottom = 474.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player7Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 483.0
+offset_right = 241.0
+offset_bottom = 551.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="Player8Text" type="TextEdit" parent="CanvasLayer/Players"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 562.0
+offset_right = 241.0
+offset_bottom = 630.0
+theme_override_font_sizes/font_size = 18
+text = "
+"
+
+[node name="ReadyButton" type="Button" parent="CanvasLayer/Players"]
+z_index = 1000
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -238.0
+offset_top = -66.0
+offset_right = -16.0
+offset_bottom = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 28
+text = "Ready!"
+
+[node name="Chat" parent="CanvasLayer" instance=ExtResource("2_y0s6v")]

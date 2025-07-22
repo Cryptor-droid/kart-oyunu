@@ -7,9 +7,11 @@
 [node name="CardTable" type="Node2D"]
 
 [node name="DeckController" parent="." instance=ExtResource("1_rv25a")]
-GameDeck = Array[int]([3, 1, 1, 1, 3, 2, 3, 2, 2, 1, 2, 2, 1, 2, 2, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2])
+GameDeck = Array[int]([3, 2, 2, 2, 1, 2, 1, 2, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 3, 2, 1, 1, 2, 1, 1, 3, 1, 3, 3, 1])
 
 [node name="CardController" parent="." instance=ExtResource("1_uylsc")]
+
+[node name="GameController" type="Node" parent="."]
 
 [node name="HandDeck" type="Node2D" parent="."]
 script = ExtResource("1_2ksbx")
@@ -28,5 +30,20 @@ offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 1
+
+[node name="Label" type="Label" parent="HandDeck/Canvas"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -274.0
+offset_right = 292.0
+offset_bottom = -175.0
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 72
+text = "Player 1"
 
 [connection signal="resized" from="HandDeck/Canvas/HandDeckPanel" to="HandDeck" method="_on_hand_deck_panel_resized"]

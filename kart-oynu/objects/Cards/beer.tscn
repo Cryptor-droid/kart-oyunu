@@ -6,8 +6,6 @@
 [node name="Card" instance=ExtResource("1_lrxn5")]
 card_id = 3
 card_amount = 5
-default_z = 0
-visual_only = false
 card_name = "Beer"
 card_description = "Heal 1 health"
 card_graphics = ExtResource("2_cfbg1")
